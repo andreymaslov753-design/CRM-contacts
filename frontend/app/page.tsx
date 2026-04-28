@@ -62,30 +62,30 @@ export default function LandingPage() {
 
         <div className={styles.features}>
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon} style={{ background: 'rgba(124,58,237,0.15)' }}>⚡</div>
+            <div className={styles.featureIcon} style={{ background: 'rgba(22,163,74,0.1)' }}>⚡</div>
             <div>
-              <div className={styles.featureDim} style={{ color: 'var(--accent-purple)' }}>Quick Add</div>
+              <div className={styles.featureDim} style={{ color: 'var(--accent-green)' }}>Quick Add</div>
               <div className={styles.featureText}>Добавляйте контакт за 2 секунды прямо во время разговора</div>
             </div>
           </div>
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon} style={{ background: 'rgba(6,182,212,0.15)' }}>🏷️</div>
+            <div className={styles.featureIcon} style={{ background: 'rgba(5,150,105,0.1)' }}>🏷️</div>
             <div>
-              <div className={styles.featureDim} style={{ color: 'var(--accent-cyan)' }}>Теги</div>
+              <div className={styles.featureDim} style={{ color: 'var(--accent-emerald)' }}>Теги</div>
               <div className={styles.featureText}>Группируйте контакты хэштегами: #конференция, #инвестор, #партнёр</div>
             </div>
           </div>
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon} style={{ background: 'rgba(219,39,119,0.15)' }}>🔔</div>
+            <div className={styles.featureIcon} style={{ background: 'rgba(13,148,136,0.1)' }}>🔔</div>
             <div>
-              <div className={styles.featureDim} style={{ color: 'var(--accent-pink)' }}>Follow-up</div>
+              <div className={styles.featureDim} style={{ color: 'var(--accent-teal)' }}>Follow-up</div>
               <div className={styles.featureText}>Напоминания о follow-up: никогда не забудете написать</div>
             </div>
           </div>
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon} style={{ background: 'rgba(0,136,204,0.15)' }}>💬</div>
+            <div className={styles.featureIcon} style={{ background: 'rgba(0,136,204,0.08)' }}>💬</div>
             <div>
-              <div className={styles.featureDim} style={{ color: '#29b6f6' }}>Telegram</div>
+              <div className={styles.featureDim} style={{ color: '#0088cc' }}>Telegram</div>
               <div className={styles.featureText}>Один клик — и вы уже в диалоге с контактом в Telegram</div>
             </div>
           </div>

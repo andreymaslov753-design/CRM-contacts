@@ -4,7 +4,7 @@
   margin-bottom: 24px;
 }
 .contactHeaderInfo { flex: 1; }
-.contactName { font-size: 28px; font-weight: 800; margin-bottom: 4px; }
+.contactName { font-size: 28px; font-weight: 800; margin-bottom: 4px; color: var(--text-primary); }
 .contactCompany { font-size: 15px; color: var(--text-secondary); }
 .contactHeaderActions { display: flex; gap: 8px; flex-shrink: 0; }
 .section { margin-bottom: 24px; }
@@ -16,8 +16,9 @@
   display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px;
 }
 .infoItem {
-  background: var(--bg-card); border: 1px solid var(--border);
+  background: white; border: 1px solid var(--border);
   border-radius: var(--radius-md); padding: 14px;
+  box-shadow: var(--shadow-soft);
 }
 .infoLabel { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 4px; }
 .infoValue { font-size: 15px; color: var(--text-primary); word-break: break-all; }
@@ -27,12 +28,12 @@
   border-radius: 20px; padding: 4px 12px; font-size: 12px;
   color: var(--text-primary); width: 120px;
 }
-.tagInput:focus { border-color: var(--accent-purple); outline: none; }
+.tagInput:focus { border-color: var(--accent-green); outline: none; }
 .notes {
-  background: var(--bg-card); border: 1px solid var(--border);
+  background: white; border: 1px solid var(--border);
   border-radius: var(--radius-md); padding: 16px;
   font-size: 14px; line-height: 1.7; color: var(--text-secondary);
-  white-space: pre-wrap;
+  white-space: pre-wrap; box-shadow: var(--shadow-soft);
 }
 .timelineItem {
   display: flex; gap: 12px; padding: 10px 0;
@@ -40,7 +41,7 @@
 }
 .timelineIcon {
   width: 32px; height: 32px; border-radius: 50%;
-  background: rgba(124,58,237,0.1); display: flex;
+  background: rgba(22,163,74,0.08); display: flex;
   align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;
 }
 .timelineContent { flex: 1; }
@@ -53,5 +54,5 @@
 .formRow > * { flex: 1; }
 
 .deleteZone {
-  margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(239,68,68,0.15);
+  margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(239,68,68,0.1);
 }

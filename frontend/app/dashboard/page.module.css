@@ -4,7 +4,7 @@
   align-items: center;
   margin-bottom: 24px;
 }
-.headerTitle { font-size: 28px; font-weight: 800; }
+.headerTitle { font-size: 28px; font-weight: 800; color: var(--text-primary); }
 .headerCount { color: var(--text-muted); font-size: 14px; margin-left: 8px; font-weight: 400; }
 
 /* ── Search ──────────────────────────────────────── */
@@ -15,27 +15,29 @@
 }
 .searchInput {
   flex: 1;
-  background: var(--bg-input);
+  background: white;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-md);
   padding: 10px 16px 10px 40px;
   color: var(--text-primary);
   font-size: 14px;
-  transition: border-color 0.2s;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b6b80' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E");
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-soft);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%238a9f93' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: 14px center;
 }
-.searchInput:focus { border-color: var(--accent-purple); }
+.searchInput:focus { border-color: var(--accent-green); box-shadow: 0 0 0 3px rgba(22,163,74,0.08); }
 
 /* ── Quick Add ───────────────────────────────────── */
 .quickAdd {
-  background: var(--bg-card);
+  background: white;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 16px 20px;
   margin-bottom: 20px;
   animation: fadeIn 0.3s ease;
+  box-shadow: var(--shadow-soft);
 }
 .quickAddRow {
   display: flex;
@@ -58,7 +60,7 @@
   font-size: 13px;
 }
 .quickAddField select { cursor: pointer; }
-.quickAddField input:focus, .quickAddField select:focus { border-color: var(--accent-purple); outline: none; }
+.quickAddField input:focus, .quickAddField select:focus { border-color: var(--accent-green); outline: none; }
 .quickAddActions { display: flex; gap: 8px; }
 
 /* ── Contacts Grid ───────────────────────────────── */
@@ -72,21 +74,23 @@
   align-items: center;
   gap: 14px;
   padding: 14px 18px;
-  background: var(--bg-card);
+  background: white;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: all 0.2s;
   animation: fadeIn 0.3s ease forwards;
+  box-shadow: var(--shadow-soft);
 }
 .contactCard:hover {
-  border-color: rgba(124,58,237,0.2);
+  border-color: var(--border-accent);
   background: var(--bg-card-hover);
   transform: translateX(2px);
+  box-shadow: var(--shadow-card);
 }
 .contactInfo { flex: 1; min-width: 0; }
 .contactName {
-  font-size: 15px; font-weight: 600;
+  font-size: 15px; font-weight: 600; color: var(--text-primary);
   display: flex; align-items: center; gap: 8px;
 }
 .contactMeta {
@@ -103,11 +107,11 @@
   display: inline-flex; align-items: center; gap: 4px;
   padding: 4px 10px; border-radius: 6px;
   font-size: 12px; font-weight: 500;
-  background: rgba(0,136,204,0.1); color: #29b6f6;
-  border: 1px solid rgba(0,136,204,0.15);
+  background: rgba(0,136,204,0.06); color: #0088cc;
+  border: 1px solid rgba(0,136,204,0.12);
   cursor: pointer; transition: all 0.2s; text-decoration: none;
 }
-.tgLink:hover { background: rgba(0,136,204,0.2); }
+.tgLink:hover { background: rgba(0,136,204,0.12); }
 
 .loading {
   display: flex;
