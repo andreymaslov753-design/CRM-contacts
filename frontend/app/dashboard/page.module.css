@@ -1,0 +1,121 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.headerTitle { font-size: 28px; font-weight: 800; }
+.headerCount { color: var(--text-muted); font-size: 14px; margin-left: 8px; font-weight: 400; }
+
+/* ── Search ──────────────────────────────────────── */
+.searchBar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.searchInput {
+  flex: 1;
+  background: var(--bg-input);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 16px 10px 40px;
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: border-color 0.2s;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b6b80' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 14px center;
+}
+.searchInput:focus { border-color: var(--accent-purple); }
+
+/* ── Quick Add ───────────────────────────────────── */
+.quickAdd {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.3s ease;
+}
+.quickAddRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.quickAddField { flex: 1; min-width: 120px; }
+.quickAddField label {
+  display: block; font-size: 11px; font-weight: 600;
+  color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.quickAddField input, .quickAddField select {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: var(--text-primary);
+  font-size: 13px;
+}
+.quickAddField select { cursor: pointer; }
+.quickAddField input:focus, .quickAddField select:focus { border-color: var(--accent-purple); outline: none; }
+.quickAddActions { display: flex; gap: 8px; }
+
+/* ── Contacts Grid ───────────────────────────────── */
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: fadeIn 0.3s ease forwards;
+}
+.contactCard:hover {
+  border-color: rgba(124,58,237,0.2);
+  background: var(--bg-card-hover);
+  transform: translateX(2px);
+}
+.contactInfo { flex: 1; min-width: 0; }
+.contactName {
+  font-size: 15px; font-weight: 600;
+  display: flex; align-items: center; gap: 8px;
+}
+.contactMeta {
+  font-size: 13px; color: var(--text-muted);
+  display: flex; gap: 12px; margin-top: 3px; flex-wrap: wrap;
+}
+.contactTags {
+  display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px;
+}
+.contactActions {
+  display: flex; gap: 6px; flex-shrink: 0;
+}
+.tgLink {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 10px; border-radius: 6px;
+  font-size: 12px; font-weight: 500;
+  background: rgba(0,136,204,0.1); color: #29b6f6;
+  border: 1px solid rgba(0,136,204,0.15);
+  cursor: pointer; transition: all 0.2s; text-decoration: none;
+}
+.tgLink:hover { background: rgba(0,136,204,0.2); }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
+@media (max-width: 640px) {
+  .quickAddRow { flex-direction: column; }
+  .contactCard { flex-wrap: wrap; }
+}
